@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('welcome') }}" method=post>
+      <dl>
+        <dt>英単語テストを始める<p>
+        <input type="submit" value="start" name ="start">
+      </dl>
+    </form>
+  {% else %}
+右上のメニューよりログインしてください。
+  {% endif %}
+{% endblock %}

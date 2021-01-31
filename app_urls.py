@@ -1,0 +1,5 @@
+WELCOME_URL = "/"
+LOGIN_URL = "/login"
+LOGOUT_URL = "/logout"
+WORD_TEST_URL = "/start_test"
+TEST_RESULT_URL = "/show_result"

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    お疲れ様でした。あなたの点数は、
+    <h1>{{point}} / 5 </h1>です。
+    <form action="{{ url_for('start_test') }}" method=get>
+      もう一度挑戦しますか？
+      <input type=submit value=retry>
+    </form>
+  {% else %}
+右上のメニューよりログインしてください。
+  {% endif %}
+{% endblock %}
